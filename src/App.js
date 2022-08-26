@@ -1,5 +1,5 @@
-import JumbotronContainer from "./containers/Jumbotron";
-import FooterContainer from "./containers/Footer";
+import JumbotronContainer from "./containers/JumbotronContainer";
+import FooterContainer from "./containers/FooterContainer";
 
 function App() {
 	return (

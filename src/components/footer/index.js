@@ -8,12 +8,9 @@ import {
 	Text,
 	Break,
 } from "./styles/footer";
-const Footer = () => {
-	return <div>Footer</div>;
+const Footer = ({ children, ...resProps }) => {
+	return <Container>{children}</Container>;
 };
-Footer.Container = ({ children, ...resProps }) => (
-	<Container {...resProps}>{children}</Container>
-);
 
 Footer.Title = ({ children, ...resProps }) => (
 	<Title {...resProps}> {children}</Title>

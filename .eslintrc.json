@@ -1,26 +1,38 @@
 {
-	"type": "module",
-
-	"extends": [
-		"airbnb",
-		"prettier",
-		"plugin:jsx-a11y/recommended",
-		"plugin:react-hooks/recommended"
-	],
-	"parser": "babel-eslint",
+	"parser": "@babel/eslint-parser",
 	"parserOptions": {
+		"requireConfigFile": false,
 		"ecmaVersion": 8,
+		"sourceType": "module",
 		"ecmaFeatures": {
 			"experimentalObjectRestSpread": true,
 			"impliedStrict": true,
 			"classes": true
 		}
 	},
+	"extends": [
+		"airbnb",
+		"prettier",
+		"plugin:jsx-a11y/recommended",
+		"plugin:react-hooks/recommended",
+		"plugin:react/recommended",
+		"standard",
+		"plugin:react/jsx-runtime",
+		"plugin:testing-library/react",
+		"plugin:jest/all"
+	],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
 	"env": {
 		"browser": true,
 		"node": true,
 		"jquery": true,
-		"jest": true
+		"jest": true,
+		"es2021": true,
+		"es6": true
 	},
 	"rules": {
 		"react-hooks/rules-of-hooks": "error",

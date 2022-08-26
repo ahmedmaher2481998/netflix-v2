@@ -22,7 +22,7 @@ export const Row = styled.div`
 
 	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 	grid-gap: 15px;
-	@media (max-width) {
+	@media (max-width: 1000px) {
 		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	}
 `;
@@ -38,6 +38,9 @@ export const Link = styled.a`
 	color: #757575;
 	margin-bottom: 20px;
 	font-size: 13px;
+	&:hover {
+		text-decoration: underline;
+	}
 `;
 
 export const Text = styled.p`
