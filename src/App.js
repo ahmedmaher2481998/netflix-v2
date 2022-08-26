@@ -1,5 +1,6 @@
 import JumboTron from "./components/jumbotron";
 import jumbotronData from "./fixtures/jumbo.json";
+
 function App() {
 	return (
 		<JumboTron.Container>

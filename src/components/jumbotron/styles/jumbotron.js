@@ -4,10 +4,11 @@ export const Inner = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
+	flex-direction: ${({ direction }) => direction};
 	max-width: 1100px;
 	margin: auto;
 	width: 100%;
-	flex-direction: ${({ direction }) => direction};
+
 	@media (max-width: 1000px) {
 		flex-direction: column;
 	}
@@ -17,7 +18,7 @@ export const Item = styled.div`
 	display: flex;
 	border-bottom: 8px solid #222;
 	padding: 50px 5%;
-	color: white;
+	color: #f8f9f9;
 	overflow: hidden;
 `;
 
@@ -40,9 +41,11 @@ export const Subtitle = styled.h2`
 `;
 
 export const Pane = styled.div`
-	width: 50px;
+	width: 50%;
 	@media (max-width: 1000px) {
-		flex-direction: column;
+		width: 100%;
+		padding: 0 45px;
+		text-align: center;
 	}
 `;
 
@@ -51,4 +54,10 @@ export const Image = styled.img`
 	height: auto;
 `;
 
-export const Container = styled.div``;
+export const Container = styled.div`
+	@media (max-width: 1000px) {
+		${Item}:last-of-type h2 {
+			margin-bottom: 50px;
+		}
+	}
+`;

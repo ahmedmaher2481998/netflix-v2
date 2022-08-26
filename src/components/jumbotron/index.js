@@ -9,13 +9,17 @@ import {
 	Title,
 } from "./styles/jumbotron";
 
-const JumboTron = ({ children, direction = "row" }) => {
+const JumboTron = ({ children, direction = "row", ...restProps }) => {
 	return (
-		<Item>
-			<Inner direction={direction}>{children}</Inner>;
+		<Item {...restProps}>
+			<Inner direction={direction}>{children}</Inner>
 		</Item>
 	);
 };
+
+JumboTron.Container = ({ children, ...restProps }) => (
+	<Container {...restProps}>{children}</Container>
+);
 
 JumboTron.Pane = ({ children, ...restProps }) => (
 	<Pane {...restProps}>{children}</Pane>
@@ -30,9 +34,5 @@ JumboTron.Subtitle = ({ children, ...restProps }) => (
 );
 
 JumboTron.Image = ({ ...restProps }) => <Image {...restProps} />;
-
-JumboTron.Container = ({ children, ...restProps }) => (
-	<Container {...restProps}>{children}</Container>
-);
 
 export default JumboTron;
