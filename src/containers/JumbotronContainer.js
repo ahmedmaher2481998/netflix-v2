@@ -1,5 +1,5 @@
-import { JumboTron } from '../components'
-import jumbotronData from '../fixtures/jumbo.json'
+import { JumboTron } from '../components';
+import jumbotronData from '../fixtures/jumbo.json';
 
 function JumbotronContainer() {
   return (
@@ -17,7 +17,7 @@ function JumbotronContainer() {
       ))}
       <JumboTron />
     </JumboTron.Container>
-  )
+  );
 }
 
 export default JumbotronContainer;

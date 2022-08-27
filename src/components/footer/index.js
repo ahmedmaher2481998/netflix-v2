@@ -1,30 +1,30 @@
-import React from 'react'
-import { Title, Row, Column, Container, Link, Text, Break } from './styles/footer'
+import React from 'react';
+import { Title, Row, Column, Container, Link, Text, Break } from './styles/footer';
 
-function Footer({ children, ...resProps }) {
-  return <Container>{children}</Container>
+ Footer({ children, ...resProps }) =>{
+  return <Container>{children}</Container>;
 }
 
-Footer.Title = function ({ children, ...resProps }) {
+Footer.Title =  ({ children, ...resProps }) =>{
   return <Title {...resProps}> {children}</Title>;
 };
-Footer.Row = function ({ children, ...resProps }) {
+Footer.Row =  ({ children, ...resProps }) =>{
   return <Row {...resProps}> {children}</Row>;
 };
 
-Footer.Column = function ({ children, ...resProps }) {
+Footer.Column =  ({ children, ...resProps }) =>{
   return <Column {...resProps}> {children}</Column>;
 };
 
-Footer.Link = function ({ children, ...resProps }) {
+Footer.Link =  ({ children, ...resProps }) =>{
   return <Link {...resProps}> {children}</Link>;
 };
 
-Footer.Text = function ({ children, ...resProps }) {
+Footer.Text =  ({ children, ...resProps }) =>{
   return <Text {...resProps}> {children}</Text>;
 };
 
-Footer.Break = function ({ children, ...resProps }) {
+Footer.Break =  ({ children, ...resProps }) =>{
   return <Break {...resProps}> {children}</Break>;
 };
 
