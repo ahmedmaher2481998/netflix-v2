@@ -15,7 +15,6 @@ function JumbotronContainer() {
           </JumboTron.Pane>
         </JumboTron>
       ))}
-      <JumboTron />
     </JumboTron.Container>
   );
 }
