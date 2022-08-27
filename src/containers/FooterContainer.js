@@ -21,7 +21,9 @@ function FooterContainer() {
   useEffect(() => {
     if (!localStorage.getItem('country')) {
       httpGetAsync(url, (data) => {
+        console.log(data);
         data = JSON.parse(data);
+        console.log('after parsing', data);
         localStorage.setItem('country', data.country);
         setCountry(data.country);
       });
