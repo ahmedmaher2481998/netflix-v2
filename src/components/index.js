@@ -1,4 +1,6 @@
-export { default as JumboTron } from './jumbotron/index';
-export { default as Footer } from './footer/index';
-export { default as Accordion } from './accordion/index';
-export { default as OptForm } from './opt-form/index';
+export { default as JumboTron } from './jumbotron/';
+export { default as Footer } from './footer/';
+export { default as Accordion } from './accordion/';
+export { default as OptForm } from './opt-form/';
+export { default as Header } from './Header/';
+export { default as Feature } from './Feature';
