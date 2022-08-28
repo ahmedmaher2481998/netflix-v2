@@ -8,10 +8,12 @@ export const Background = styled.div`
       src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
     top left / cover no-repeat;
 `;
-export const Logo = styled.img`
+
+export const Logo = styled.svg`
   height: 36px;
   width: 134px;
   margin-right: 40px;
+  filter: invert(12%) sepia(100%) saturate(7394%) hue-rotate(355deg) brightness(99%) contrast(97%);
   cursor: pointer;
   @media (min-width: 1449px) {
     height: 45px;

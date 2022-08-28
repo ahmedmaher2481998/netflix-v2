@@ -1,10 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import auth from 'firebase/auth';
+
 import { seedDatabase } from './seed';
 import { getFirestore } from 'firebase/firestore';
 // inserting data into firestore
 // import { getFirestore, collection, doc, addDoc } from 'firebase/firestore';
+import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -18,6 +19,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth();
 // inserting data
 // seedDatabase({ addDoc, collection, db });
-export { app };
+export { app, db, auth };

@@ -5,7 +5,15 @@ const HeaderContainer = ({ children }) => {
   return (
     <Header>
       <Header.Frame>
-        <Header.Logo to={routers.Home} alt="Netflix" src={'/images/logo.png'} />
+        <Header.Logo
+          to={routers.Home}
+          viewBox="0 0 111 30"
+          className="svg-icon svg-icon-netflix-logo"
+          aria-hidden="true"
+          focusable="false"
+          alt="Netflix"
+          // src={'/images/logo.png'}
+        />
         <Header.ButtonLink to={routers.SignIn}>Sign In</Header.ButtonLink>
       </Header.Frame>
       {children}
