@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Input, Button, Break, Text } from './styles/opt-form';
-const OptForm = ({ children, ...restProps }) => {
+function OptForm({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
-};
+}
 
 OptForm.Input = function OptFromInput({ children, ...restProps }) {
   return <Input {...restProps}>{children}</Input>;
