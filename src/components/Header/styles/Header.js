@@ -4,19 +4,15 @@ import { Link as ReactLinkButton } from 'react-router-dom';
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.1),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left /
-      cover no-repeat;
+  background: url(${({ src }) =>
+      src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
+    top left / cover no-repeat;
 `;
 export const Logo = styled.img`
   height: 36px;
   width: 134px;
   margin-right: 40px;
+  cursor: pointer;
   @media (min-width: 1449px) {
     height: 45px;
     width: 167px;

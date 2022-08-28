@@ -5,9 +5,12 @@ export const Container = styled.div`
   flex-direction: column;
   border-bottom: 8px solid #222;
   text-align: center;
-  padding: 165px 45px;
+  padding: 150px 45px;
 `;
-
+export const Break = styled.div`
+  flex-basis: 100%;
+  height: 0;
+`;
 export const Title = styled.h1`
   color: white;
   max-width: 640px;

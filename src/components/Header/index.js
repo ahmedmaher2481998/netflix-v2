@@ -1,11 +1,15 @@
 import { Background, ButtonLink, Frame, Logo } from './styles/Header';
-
-const Header = ({ bg, Children, ...restProps }) => {
-  return bg ? <Background {...restProps}>{Children}</Background> : Children;
+import { Link as ReachRouterLink } from 'react-router-dom';
+const Header = ({ bg = true, children, ...restProps }) => {
+  return bg ? <Background {...restProps}>{children}</Background> : children;
 };
 
-Header.Logo = function HeaderLogo({ children, ...restProps }) {
-  return <Logo {...restProps}>{children}</Logo>;
+Header.Logo = function HeaderLogo({ to, children, ...restProps }) {
+  return (
+    <ReachRouterLink to={to}>
+      <Logo {...restProps}>{children}</Logo>
+    </ReachRouterLink>
+  );
 };
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
