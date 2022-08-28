@@ -3,11 +3,13 @@ import { createRoot } from 'react-dom/client';
 import 'normalize.css';
 import { GlobalStyle } from './global-styles';
 import App from './App';
-
+import { app } from './lib/firebase';
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
     <GlobalStyle />
     <App />
-  </React.StrictMode>
+  </>
+  // </React.StrictMode>
 );

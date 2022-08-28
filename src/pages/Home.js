@@ -5,7 +5,7 @@ import HeaderContainer from '../containers/HeaderContainer';
 const Home = () => {
   return (
     <>
-      <HeaderContainer></HeaderContainer>
+      {/* <HeaderContainer></HeaderContainer> */}
       <JumbotronContainer />
       <FAQContainer />
       <FooterContainer />
