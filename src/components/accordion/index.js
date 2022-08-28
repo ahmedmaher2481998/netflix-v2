@@ -3,34 +3,34 @@ import { Container, Inner, Body, Frame, Header, Item, Title } from './styles/acc
 
 const ShowToggleContext = createContext();
 
-function Accordion({ children, ...resProps }) {
+function Accordion({ children, ...restProps }) {
   return (
     <>
-      <Container>
-        <Inner {...resProps}>{children}</Inner>
+      <Container {...restProps}>
+        <Inner>{children}</Inner>
       </Container>
     </>
   );
 }
 
-Accordion.Item = function AccordionItem({ children, ...resProps }) {
+Accordion.Item = function AccordionItem({ children, ...restProps }) {
   const [showToggle, setShowToggle] = useState(false);
 
   return (
     <ShowToggleContext.Provider value={{ showToggle, setShowToggle }}>
-      <Item {...resProps}> {children}</Item>
+      <Item {...restProps}> {children}</Item>
     </ShowToggleContext.Provider>
   );
 };
 
-Accordion.Frame = function AccordionFrame({ children, ...resProps }) {
-  return <Frame {...resProps}> {children}</Frame>;
+Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
+  return <Frame {...restProps}> {children}</Frame>;
 };
 
-Accordion.Header = function AccordionHeader({ children, ...resProps }) {
+Accordion.Header = function AccordionHeader({ children, ...restProps }) {
   const { setShowToggle, showToggle } = useContext(ShowToggleContext);
   return (
-    <Header onClick={() => setShowToggle((pre) => !pre)} {...resProps}>
+    <Header onClick={() => setShowToggle((pre) => !pre)} {...restProps}>
       {children}
       {showToggle ? (
         <img src="/images/icons/close-slim.png" alt="Close" />
@@ -41,13 +41,17 @@ Accordion.Header = function AccordionHeader({ children, ...resProps }) {
   );
 };
 
-Accordion.Body = function AccordionBody({ children, ...resProps }) {
+Accordion.Body = function AccordionBody({ children, ...restProps }) {
   const { showToggle } = useContext(ShowToggleContext);
-  return showToggle ? <Body {...resProps}> {children}</Body> : null;
+  return showToggle ? (
+    <Body className={showToggle ? 'open' : 'closed'} {...restProps}>
+      {children}
+    </Body>
+  ) : null;
 };
 
-Accordion.Title = function AccordionTitle({ children, ...resProps }) {
-  return <Title {...resProps}> {children}</Title>;
+Accordion.Title = function AccordionTitle({ children, ...restProps }) {
+  return <Title {...restProps}> {children}</Title>;
 };
 
 export default Accordion;
