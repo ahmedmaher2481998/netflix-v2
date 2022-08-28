@@ -5,3 +5,4 @@
 ## bugs
 
 1. the opt from is not responsive as it should be
+2. footer looks very big
