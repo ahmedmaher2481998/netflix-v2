@@ -12,7 +12,6 @@ const HeaderContainer = ({ children }) => {
           aria-hidden="true"
           focusable="false"
           alt="Netflix"
-          // src={'/images/logo.png'}
         />
         <Header.ButtonLink to={routers.SignIn}>Sign In</Header.ButtonLink>
       </Header.Frame>
