@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import FooterContainer from '../containers/FooterContainer';
 import HeaderContainer from '../containers/HeaderContainer';
 import { Form } from '../components';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import * as routers from '../constants/routes';
 import { useNavigate } from 'react-router-dom';
 import { FireBaseContext } from '../context/firebase';
@@ -21,6 +21,10 @@ const SignIn = () => {
         // Signed in
         const user = userCredential.user;
         console.log(user);
+        updateProfile(auth.currentUser, {
+          displayName: firstName,
+          photoURL: Math.floor(Math.random() * 5) + 1
+        });
         console.log(auth.currentUser);
         navigate(routers.Browse);
         // ...
@@ -61,7 +65,7 @@ const SignIn = () => {
             />
             <Form.Submit type="submit" disabled={validate}>
               {' '}
-              Sign In{' '}
+              Sign Up{' '}
             </Form.Submit>
             <Form.Text>
               Already a user? <Form.Link to={routers.SignIn}> Sign in now.</Form.Link>
