@@ -4,8 +4,8 @@ import * as routes from './constants/routes';
 import { Browse, Home, SignIn, SignUp } from './pages/';
 
 function App() {
-  const user = { hi: 'ahmed' };
-  // const user = null;
+  // const user = { hi: 'ahmed' };
+  const user = null;
   return (
     <Router>
       <Routes>
@@ -13,8 +13,8 @@ function App() {
 
         <Route path={routes.Browse} element={user ? <Browse /> : <Navigate to={routes.SignIn} />} />
 
-        <Route path={routes.SignIn} element={<SignIn />} />
-        <Route path={routes.SignUp} element={<SignUp />} />
+        <Route path={routes.SignIn} element={user ? <Navigate to={routes.Browse} /> : <SignIn />} />
+        <Route path={routes.SignUp} element={user ? <Navigate to={routes.Browse} /> : <SignUp />} />
       </Routes>
     </Router>
   );
