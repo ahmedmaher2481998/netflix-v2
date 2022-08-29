@@ -15,7 +15,6 @@ const SignIn = () => {
   const { auth } = useContext(FireBaseContext);
   const handleSignIn = (e) => {
     e.preventDefault();
-    console.log('Clicked');
     signInWithEmailAndPassword(auth, emailAddress, password)
       .then((userCredential) => {
         // Signed in
@@ -52,14 +51,18 @@ const SignIn = () => {
               type="password"
               placeholder="Password"
             />
-            <Form.Submit disabled={validate}> Sign In </Form.Submit>
+            <Form.Submit type="submit" disabled={validate}>
+              {' '}
+              Sign In{' '}
+            </Form.Submit>
+            <Form.Text>
+              New to Netflix? <Form.Link to={routers.SignUp}> Sign up now.</Form.Link>
+            </Form.Text>
+            <Form.SmallText>
+              This page is protected by Google reCAPTCHA to ensure you&quot;re not a bot. Learn
+              more.
+            </Form.SmallText>
           </Form.Base>
-          <Form.Text>
-            New to Netflix? <Form.Link to={routers.SignUp}> Sign up now.</Form.Link>
-          </Form.Text>
-          <Form.SmallText>
-            This page is protected by Google reCAPTCHA to ensure you&quot;re not a bot. Learn more.
-          </Form.SmallText>
         </Form>
       </HeaderContainer>
       <FooterContainer />
