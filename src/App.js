@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import * as routes from './constants/routes';
-// { Browse, Home, SignIn, SignUp }
+import { useAuthUser } from './hooks';
 import { Browse, Home, SignIn, SignUp } from './pages/';
 
 function App() {
-  // const user = { hi: 'ahmed' };
-  const user = null;
+  const { user } = useAuthUser();
+
   return (
     <Router>
       <Routes>
