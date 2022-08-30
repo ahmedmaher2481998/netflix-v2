@@ -13,7 +13,8 @@ import {
   Search,
   SearchIcon,
   SearchInput,
-  Text
+  Text,
+  Play
 } from './styles/Header';
 import { useState } from 'react';
 import { Link as ReachRouterLink } from 'react-router-dom';
@@ -90,5 +91,9 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...rest }) {
       />
     </Search>
   );
+};
+
+Header.PlayButton = function HeaderPlayButton({ children, ...rest }) {
+  return <Play {...rest}>{children}</Play>;
 };
 export default Header;

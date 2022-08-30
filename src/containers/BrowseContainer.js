@@ -66,6 +66,7 @@ const BrowseContainer = () => {
             clown, and the guise he projects in a futile attempt to feel like he&apos;s part of the
             world around him.
           </Header.Text>
+          <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
     </>
