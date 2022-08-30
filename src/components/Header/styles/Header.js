@@ -159,6 +159,41 @@ export const Text = styled.p`
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;
-export const Search = styled.div``;
-export const SearchInput = styled.input``;
-export const SearchIcon = styled.button``;
+export const Search = styled.div`
+  display: flex;
+  align-items: center;
+  svg {
+    color: white;
+    cursor: pointer;
+  }
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+export const SearchInput = styled.input`
+  background-color: rgba(64, 64, 64, 0.5);
+  color: white;
+  border: 1px solid white;
+  transition: width 0.5s;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 4px;
+  opacity: ${({ active }) => (active === true ? '10px' : '0')};
+  width: ${({ active }) => (active === true ? '200px' : '0')};
+  margin-left: ${({ active }) => (active === true ? '10px' : '0')};
+  padding: ${({ active }) => (active === true ? '0 10px' : '0')};
+`;
+export const SearchIcon = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 16px;
+  }
+`;
