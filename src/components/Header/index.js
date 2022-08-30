@@ -10,8 +10,12 @@ import {
   Link,
   Picture,
   Profile,
+  Search,
+  SearchIcon,
+  SearchInput,
   Text
 } from './styles/Header';
+import { useState } from 'react';
 import { Link as ReachRouterLink } from 'react-router-dom';
 const Header = ({ bg = true, hideOnSmallScreen, children, ...restProps }) => {
   return bg ? (
@@ -71,5 +75,20 @@ Header.Text = function HeaderText({ children, ...restProps }) {
 Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
-
+Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...rest }) {
+  const [searchActive, setSearchActive] = useState(false);
+  return (
+    <Search onClick={() => setSearchActive((pre) => !pre)}>
+      <SearchIcon>
+        <img src={'/images/icons/search.png'} alt={'search icon'} />
+      </SearchIcon>
+      <SearchInput
+        placeholder="Search films and series"
+        value={searchTerm}
+        onChange={({ target }) => setSearchTerm(target.value)}
+        active={searchActive}
+      />
+    </Search>
+  );
+};
 export default Header;

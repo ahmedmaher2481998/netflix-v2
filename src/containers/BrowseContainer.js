@@ -9,9 +9,9 @@ const BrowseContainer = () => {
   const { auth } = useContext(FireBaseContext);
   const user = auth.currentUser || {};
   const [profile, setProfile] = useState({});
+  const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    console.log('profile', profile);
     setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -36,6 +36,7 @@ const BrowseContainer = () => {
           </Header.Group>
 
           <Header.Group>
+            <Header.Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
@@ -43,13 +44,15 @@ const BrowseContainer = () => {
                   <Header.Picture src={user.photoURL} />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
-                <Header.TextLink
-                  onClick={() => {
-                    signOut(auth);
-                    setProfile({});
-                  }}>
-                  Sign out
-                </Header.TextLink>
+                <Header.Group>
+                  <Header.TextLink
+                    onClick={() => {
+                      signOut(auth);
+                      setProfile({});
+                    }}>
+                    Sign out
+                  </Header.TextLink>
+                </Header.Group>
               </Header.Dropdown>
             </Header.Profile>
           </Header.Group>

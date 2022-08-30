@@ -79,6 +79,7 @@ export const Group = styled.div`
 
 export const Picture = styled.button`
   background: url(${({ src }) => src});
+  background-repeat: no-repeat;
   background-size: contain;
   border: 0;
   width: 32px;
@@ -96,11 +97,12 @@ export const Feature = styled(Frame)`
   }
 `;
 export const Dropdown = styled.div`
+  border-radius: 5px;
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 10px;
-  width: 100px;
+  width: 150px;
   top: 32px;
   right: 10px;
 
@@ -157,3 +159,6 @@ export const Text = styled.p`
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;
+export const Search = styled.div``;
+export const SearchInput = styled.input``;
+export const SearchIcon = styled.button``;
