@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import SelectProfileContainer from './Profiles';
 import { FireBaseContext } from '../context/firebase';
-import { Loading, Header } from '../components';
+import { Loading, Header, Card } from '../components';
 import * as routes from '../constants/routes';
 import { signOut } from 'firebase/auth';
 
@@ -85,6 +85,11 @@ const BrowseContainer = ({ slides }) => {
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
+      <Card>
+        {slideRow.map((item) => (
+          <Card.Title key={`${category}-${item.title.toLowerCase()}`}>{item.title}</Card.Title>
+        ))}
+      </Card>
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />
