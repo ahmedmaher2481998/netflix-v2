@@ -1,4 +1,3 @@
-import React from 'react';
 import { Profiles } from '../components';
 import * as routes from '../constants/routes';
 import { Header } from '../components';
@@ -18,11 +17,10 @@ const SelectProfileContainer = ({ user, setProfile }) => {
         </Header.Frame>
       </Header>
       <Profiles>
-        <Profiles.Title>How is watching ? </Profiles.Title>
+        <Profiles.Title>{"Who's watching?"} </Profiles.Title>
         <Profiles.List>
           <Profiles.User
             onClick={() => {
-              console.log('clicked');
               setProfile(() => ({
                 displayName: user.displayName,
                 photoURL: user.photoURL
