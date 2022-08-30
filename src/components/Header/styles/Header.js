@@ -193,7 +193,9 @@ export const SearchIcon = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
   img {
-    height: 16px;
+    filter: brightness(0) invert(1);
+    width: 16px;
   }
 `;
