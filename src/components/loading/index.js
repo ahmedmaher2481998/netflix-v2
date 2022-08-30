@@ -4,7 +4,7 @@ const Loading = ({ src, ...rest }) => {
   return (
     <Spinner {...rest}>
       <LockBody />
-      <Picture src={src} />
+      <Picture src={`public/images/users/${src}.png`} />
     </Spinner>
   );
 };

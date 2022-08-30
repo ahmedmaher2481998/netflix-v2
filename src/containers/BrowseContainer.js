@@ -1,22 +1,30 @@
 import { useContext, useEffect, useState } from 'react';
 import SelectProfileContainer from './Profiles';
 import { FireBaseContext } from '../context/firebase';
-
-const BrowseContainer = () => {
+import { Loading } from '../components';
+const BrowseContainer = ({ slids }) => {
   const { auth } = useContext(FireBaseContext);
   const user = auth.currentUser || {};
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    console.log(profile);
-    const t = setTimeout(() => {
+    let t;
+
+    console.log('profile', profile);
+    setTimeout(() => {
       setLoading(false);
     }, 3000);
-
-    return clearTimeout(t);
   }, [profile.displayName]);
 
-  return <SelectProfileContainer user={user} setProfile={setProfile} />;
+  return profile.displayName ? (
+    loading ? (
+      <Loading src={profile.photoUrl} />
+    ) : (
+      <p>this is page</p>
+    )
+  ) : (
+    <SelectProfileContainer user={user} setProfile={setProfile} />
+  );
 };
 
 export default BrowseContainer;
