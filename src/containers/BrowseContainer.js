@@ -18,9 +18,9 @@ const BrowseContainer = ({ slids }) => {
 
   return profile.displayName ? (
     loading ? (
-      <Loading src={profile.photoUrl} />
+      <Loading src={profile.photoURL} />
     ) : (
-      <p>this is page</p>
+      <Loading.ReleaseBody />
     )
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />

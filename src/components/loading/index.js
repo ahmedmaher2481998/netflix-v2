@@ -3,8 +3,8 @@ import { Spinner, ReleaseBody, LockBody, Picture } from './styles/loading';
 const Loading = ({ src, ...rest }) => {
   return (
     <Spinner {...rest}>
+      <Picture src={`/images/users/${src}.png`} alt={'user profile image'} />
       <LockBody />
-      <Picture src={`public/images/users/${src}.png`} />
     </Spinner>
   );
 };
