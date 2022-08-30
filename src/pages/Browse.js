@@ -7,9 +7,9 @@ const Browse = () => {
   const [series, setSeries] = useState(null);
   useContent({ target: 'films', setTarget: setFilms });
   useContent({ target: 'series', setTarget: setSeries });
-  const silds = selectionFilter({ films, series });
+  const slides = selectionFilter({ films, series });
 
-  return <BrowseContainer silds={silds} />;
+  return <BrowseContainer slides={slides} />;
 };
 
 export default Browse;

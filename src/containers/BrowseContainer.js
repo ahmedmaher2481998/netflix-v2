@@ -5,12 +5,20 @@ import { Loading, Header } from '../components';
 import * as routes from '../constants/routes';
 import { signOut } from 'firebase/auth';
 
-const BrowseContainer = () => {
+const BrowseContainer = ({ slides }) => {
   const { auth } = useContext(FireBaseContext);
   const user = auth.currentUser || {};
   const [profile, setProfile] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
+  const [category, setCategory] = useState('series');
+  const [slideRow, setSlideRow] = useState([]);
+
+  useEffect(() => {
+    setSlideRow(() => slides[category]);
+    console.log(slideRow, category);
+  }, [category, slideRow]);
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -31,8 +39,16 @@ const BrowseContainer = () => {
               focusable="false"
               alt="Netflix"
             />
-            <Header.TextLink>Films</Header.TextLink>
-            <Header.TextLink>Series</Header.TextLink>
+            <Header.TextLink
+              active={category === 'series' ? 'true' : 'false'}
+              onClick={() => setCategory('series')}>
+              Series
+            </Header.TextLink>
+            <Header.TextLink
+              active={category === 'films' ? 'true' : 'false'}
+              onClick={() => setCategory('films')}>
+              Films
+            </Header.TextLink>
           </Header.Group>
 
           <Header.Group>
