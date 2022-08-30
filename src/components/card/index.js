@@ -28,8 +28,47 @@ const Card = ({ children, ...rest }) => {
         setShowFeature,
         itemFeature,
         setItemFeature
-      }}></FeatureContext.Provider>
+      }}>
+      <Container {...rest}>{children}</Container>
+    </FeatureContext.Provider>
   );
+};
+Card.Group = function CardGroup({ children, ...rest }) {
+  return <Group {...rest}>{children}</Group>;
+};
+
+Card.Title = function CardTitle({ children, ...rest }) {
+  return <Title {...rest}>{children}</Title>;
+};
+Card.SubTitle = function CardSubTitle({ children, ...rest }) {
+  return <SubTitle {...rest}>{children}</SubTitle>;
+};
+Card.Text = function CardText({ children, ...rest }) {
+  return <Text {...rest}>{children}</Text>;
+};
+
+Card.Item = function CardItem({ item, children, ...rest }) {
+  const { setItemFeature, setShowFeature } = useContext(FeatureContext);
+  return (
+    <Item
+      onClick={() => {
+        setItemFeature(item);
+        setShowFeature(true);
+      }}
+      {...rest}>
+      {children}
+    </Item>
+  );
+};
+
+Card.Image = function CardImage({ ...rest }) {
+  return <Image {...rest} />;
+};
+Card.Meta = function CardMeta({ children, ...rest }) {
+  return <Meta {...rest}>{children}</Meta>;
+};
+Card.Entities = function CardEntities({ children, ...rest }) {
+  return <Entities {...rest}>{children}</Entities>;
 };
 
 export default Card;
