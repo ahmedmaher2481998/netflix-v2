@@ -85,21 +85,8 @@ export const Picture = styled.button`
   height: 32px;
   cursor: pointer;
 `;
-export const Profile = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-  position: relative;
-  button {
-    cursor: pointer;
-  }
-  &:hover > ${Dropdown} {
-    display: flex;
-    flex-direction: column;
-  }
-`;
 
-export const Feature = styled(Container)`
+export const Feature = styled(Frame)`
   padding: 150px 0 500px 0;
   flex-direction: column;
   align-items: normal;
@@ -116,6 +103,19 @@ export const Dropdown = styled.div`
   width: 100px;
   top: 32px;
   right: 10px;
+`;
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+  button {
+    cursor: pointer;
+  }
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const FeatureCallOut = styled.h2`

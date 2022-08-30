@@ -14,10 +14,16 @@ import {
 } from './styles/Header';
 import { Link as ReachRouterLink } from 'react-router-dom';
 const Header = ({ bg = true, hideOnSmallScreen, children, ...restProps }) => {
-  return bg ? <Background {...restProps}>{children}</Background> : children;
+  return bg ? (
+    <Background hideOnSmallScreen={hideOnSmallScreen} {...restProps}>
+      {children}
+    </Background>
+  ) : (
+    children
+  );
 };
 
-Header.Logo = function HeaderLogo({ to, children, ...restProps }) {
+Header.Logo = function HeaderLogo({ to, ...restProps }) {
   return (
     <ReachRouterLink to={to}>
       <Logo {...restProps}>
