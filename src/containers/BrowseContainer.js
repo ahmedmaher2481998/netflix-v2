@@ -20,7 +20,7 @@ const BrowseContainer = () => {
   return profile.displayName ? (
     <>
       {loading ? <Loading src={profile.photoURL} /> : <Loading.ReleaseBody />}
-      <Header bg={'joker1'} hideOnSmallScreen>
+      <Header bg={true} src={'joker1'} hideOnSmallScreen>
         <Header.Frame>
           <Header.Group>
             <Header.Logo
