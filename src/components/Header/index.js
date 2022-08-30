@@ -78,8 +78,8 @@ Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
 Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...rest }) {
   const [searchActive, setSearchActive] = useState(false);
   return (
-    <Search onClick={() => setSearchActive((pre) => !pre)}>
-      <SearchIcon>
+    <Search>
+      <SearchIcon onClick={() => setSearchActive((pre) => !pre)}>
         <img src={'/images/icons/search.png'} alt={'search icon'} />
       </SearchIcon>
       <SearchInput
