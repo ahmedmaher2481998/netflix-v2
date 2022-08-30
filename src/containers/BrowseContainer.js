@@ -8,8 +8,6 @@ const BrowseContainer = ({ slids }) => {
   const [profile, setProfile] = useState({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    let t;
-
     console.log('profile', profile);
     setTimeout(() => {
       setLoading(false);
