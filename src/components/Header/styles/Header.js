@@ -13,7 +13,7 @@ export const Background = styled.div`
     url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left /
       cover no-repeat;
   @media (max-width: 1100px) {
-    ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
+    ${({ hideOnSmallScreen }) => hideOnSmallScreen && `background: none;`}
   }
 `;
 export const Container = styled.div`

@@ -1,6 +1,20 @@
-import { Background, ButtonLink, Frame, Logo } from './styles/Header';
+import {
+  Background,
+  ButtonLink,
+  Frame,
+  Logo,
+  Container,
+  Dropdown,
+  Feature,
+  FeatureCallOut,
+  Group,
+  Link,
+  Picture,
+  Profile,
+  Text
+} from './styles/Header';
 import { Link as ReachRouterLink } from 'react-router-dom';
-const Header = ({ bg = true, children, ...restProps }) => {
+const Header = ({ bg = true, hideOnSmallScreen, children, ...restProps }) => {
   return bg ? <Background {...restProps}>{children}</Background> : children;
 };
 
