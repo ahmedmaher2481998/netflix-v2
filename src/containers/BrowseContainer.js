@@ -3,6 +3,8 @@ import SelectProfileContainer from './Profiles';
 import { FireBaseContext } from '../context/firebase';
 import { Loading, Header } from '../components';
 import * as routes from '../constants/routes';
+import { signOut } from 'firebase/auth';
+
 const BrowseContainer = () => {
   const { auth } = useContext(FireBaseContext);
   const user = auth.currentUser || {};
@@ -41,6 +43,13 @@ const BrowseContainer = () => {
                   <Header.Picture src={user.photoURL} />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
+                <Header.TextLink
+                  onClick={() => {
+                    signOut(auth);
+                    setProfile({});
+                  }}>
+                  Sign out
+                </Header.TextLink>
               </Header.Dropdown>
             </Header.Profile>
           </Header.Group>
