@@ -1,7 +1,8 @@
 import React from 'react';
+import SelectProfileContainer from './Profiles';
 
 const BrowseContainer = () => {
-  return <div>BrowseContainer</div>;
+  return <SelectProfileContainer />;
 };
 
 export default BrowseContainer;
