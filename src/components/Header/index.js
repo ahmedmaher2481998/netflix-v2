@@ -68,7 +68,7 @@ Header.Profile = function HeaderProfile({ children, ...restProps }) {
 Header.Text = function HeaderText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
-Header.Link = function HeaderLink({ children, ...restProps }) {
+Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
 };
 

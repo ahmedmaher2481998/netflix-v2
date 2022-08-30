@@ -3,7 +3,7 @@ import SelectProfileContainer from './Profiles';
 import { FireBaseContext } from '../context/firebase';
 import { Loading, Header } from '../components';
 import * as routes from '../constants/routes';
-const BrowseContainer = ({ slids }) => {
+const BrowseContainer = () => {
   const { auth } = useContext(FireBaseContext);
   const user = auth.currentUser || {};
   const [profile, setProfile] = useState({});
@@ -17,10 +17,7 @@ const BrowseContainer = ({ slids }) => {
 
   return profile.displayName ? (
     <>
-      ( loading ? (
-      <Loading src={profile.photoURL} />
-      ) : (
-      <Loading.ReleaseBody />) )
+      {loading ? <Loading src={profile.photoURL} /> : <Loading.ReleaseBody />}
       <Header bg={'joker1'} hideOnSmallScreen>
         <Header.Frame>
           <Header.Group>
@@ -39,12 +36,12 @@ const BrowseContainer = ({ slids }) => {
           <Header.Group>
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
-              <Header.DropDown>
+              <Header.Dropdown>
                 <Header.Group>
                   <Header.Picture src={user.photoURL} />
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
-              </Header.DropDown>
+              </Header.Dropdown>
             </Header.Profile>
           </Header.Group>
         </Header.Frame>
@@ -52,10 +49,10 @@ const BrowseContainer = ({ slids }) => {
         <Header.Feature>
           <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
           <Header.Text>
-            {`Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the
+            Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the
             streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a
-            clown, and the guise he projects in a futile attempt to feel like he's part of the world
-            around him.`}
+            clown, and the guise he projects in a futile attempt to feel like he&apos;s part of the
+            world around him.
           </Header.Text>
         </Header.Feature>
       </Header>
