@@ -13,11 +13,29 @@ const Player = ({ children, ...rest }) => {
   );
 };
 
-Player.Video = function PlayerVideo({ children, ...rest }) {
-  return <></>;
+Player.Video = function PlayerVideo({ src, ...rest }) {
+  const { setShowPlayer, showPlayer } = useContext(PlayerContext);
+  return showPlayer
+    ? createPortal(
+        <Overlay onClick={() => setShowPlayer(false)} {...rest}>
+          <Inner>
+            <video id="netflix-video-player">
+              <source src={src} type="video/mp4" />
+            </video>
+            <Close />
+          </Inner>
+        </Overlay>,
+        document.body
+      )
+    : null;
 };
 
-Player.Button = function PlayerButton({ children, ...rest }) {
-  return <></>;
+Player.Button = function PlayerButton({ ...rest }) {
+  const { showPlayer, setShowPlayer } = useContext(PlayerContext);
+  return (
+    <Button {...rest} onClick={() => setShowPlayer((pre) => !pre)}>
+      Play
+    </Button>
+  );
 };
 export default Player;
