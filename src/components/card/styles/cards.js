@@ -37,6 +37,15 @@ export const Meta = styled.div`
   padding: 10px;
   background-color: #0000008f;
 `;
+export const Text = styled.p`
+  margin-top: 5px;
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 0;
+  user-select: none;
+  display: none;
+  line-height: normal;
+`;
 
 export const Item = styled.div`
   display: flex;
@@ -79,6 +88,16 @@ export const Image = styled.img`
   margin: 0;
 `;
 
+export const FeatureText = styled.p`
+  font-size: 18px;
+  color: white;
+  font-weight: ${({ fontWeight }) => (fontWeight === 'bold' ? 'bold' : 'normal')};
+  margin: 0;
+  @media (max-width: 600px) {
+    line-height: 22px;
+  }
+`;
+
 export const Feature = styled.div`
   display: flex;
   flex-direction: row;
@@ -107,16 +126,6 @@ export const FeatureTitle = styled(Title)`
   margin-left: 0;
 `;
 
-export const FeatureText = styled.p`
-  font-size: 18px;
-  color: white;
-  font-weight: ${({ fontWeight }) => (fontWeight === 'bold' ? 'bold' : 'normal')};
-  margin: 0;
-  @media (max-width: 600px) {
-    line-height: 22px;
-  }
-`;
-
 export const FeatureClose = styled.div`
   color: white;
   position: absolute;
@@ -141,15 +150,6 @@ export const Group = styled.div`
       margin-top: -100px;
     }
   }
-`;
-export const Text = styled.p`
-  margin-top: 5px;
-  font-size: 10px;
-  color: #fff;
-  margin-bottom: 0;
-  user-select: none;
-  display: none;
-  line-height: normal;
 `;
 
 export const Entities = styled.div`
