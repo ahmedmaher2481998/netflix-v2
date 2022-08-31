@@ -30,6 +30,14 @@ export const SubTitle = styled.p`
   display: none;
 `;
 
+export const Meta = styled.div`
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background-color: #0000008f;
+`;
+
 export const Item = styled.div`
   display: flex;
   flex-direction: column;
@@ -147,14 +155,6 @@ export const Text = styled.p`
 export const Entities = styled.div`
   display: flex;
   flex-direction: row;
-`;
-
-export const Meta = styled.div`
-  display: none;
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
-  background-color: #0000008f;
 `;
 
 export const Maturity = styled.div`
