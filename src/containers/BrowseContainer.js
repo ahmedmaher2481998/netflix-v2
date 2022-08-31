@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import SelectProfileContainer from './Profiles';
 import { FireBaseContext } from '../context/firebase';
-import { Loading, Header, Card } from '../components';
+import { Loading, Header, Card, Player } from '../components';
 import * as routes from '../constants/routes';
 import { signOut } from 'firebase/auth';
 
@@ -103,10 +103,10 @@ const BrowseContainer = ({ slides }) => {
               ))}
             </Card.Entities>
             <Card.Feature category={category}>
-              {/* <Player>
-                <Player.Button/>
-                <Player.video src={"..."}/>
-              </Player> */}
+              <Player>
+                <Player.Button />
+                <Player.Video src={'/videos/bunny.mp4'} />
+              </Player>
             </Card.Feature>
           </Card>
         ))}

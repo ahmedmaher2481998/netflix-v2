@@ -7,7 +7,7 @@ const PlayerContext = createContext();
 const Player = ({ children, ...rest }) => {
   const [showPlayer, setShowPlayer] = useState(false);
   return (
-    <PlayerContext.Provider value={(showPlayer, setShowPlayer)}>
+    <PlayerContext.Provider value={{ showPlayer, setShowPlayer }}>
       <Container {...rest}>{children}</Container>
     </PlayerContext.Provider>
   );
@@ -19,7 +19,7 @@ Player.Video = function PlayerVideo({ src, ...rest }) {
     ? createPortal(
         <Overlay onClick={() => setShowPlayer(false)} {...rest}>
           <Inner>
-            <video id="netflix-video-player">
+            <video autoPlay controls id="netflix-video-player">
               <source src={src} type="video/mp4" />
             </video>
             <Close />
@@ -31,7 +31,7 @@ Player.Video = function PlayerVideo({ src, ...rest }) {
 };
 
 Player.Button = function PlayerButton({ ...rest }) {
-  const { showPlayer, setShowPlayer } = useContext(PlayerContext);
+  const { setShowPlayer } = useContext(PlayerContext);
   return (
     <Button {...rest} onClick={() => setShowPlayer((pre) => !pre)}>
       Play
