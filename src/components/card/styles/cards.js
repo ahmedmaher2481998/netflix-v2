@@ -52,14 +52,15 @@ export const Item = styled.div`
   flex-direction: column;
   margin-right: 5px;
   position: relative;
-  cursor:pointer;
-  transition transform .3s ;
-  &:hover{ 
-    transform: scale(1.1)
+  cursor: pointer;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
     z-index: 50;
   }
-  @media(max-width:1200px){
-     &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
+  @media (max-width: 1200px) {
+    &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
       display: block;
       z-index: 100;
     }
