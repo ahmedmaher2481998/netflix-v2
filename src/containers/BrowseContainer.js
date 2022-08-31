@@ -16,14 +16,16 @@ const BrowseContainer = ({ slides }) => {
 
   useEffect(() => {
     setSlideRow(() => slides[category]);
-    console.log(slideRow, category);
-  }, [category, slideRow]);
+
+    // console.log('slide row followed by category', slideRow, category);
+  }, [category, slides]);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
   }, [profile.displayName]);
+  console.log('Slide Row ...', slideRow);
 
   return profile.displayName ? (
     <>
@@ -85,11 +87,34 @@ const BrowseContainer = ({ slides }) => {
           <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
-      <Card>
-        {slideRow.map((item) => (
-          <Card.Title key={`${category}-${item.title.toLowerCase()}`}>{item.title}</Card.Title>
+      <Card.Group>
+        {slideRow.map((slideItem) => (
+          <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
+            <Card.Title>{slideItem.title}</Card.Title>
+            <Card.Entities>
+              {console.log('slideitem', slideItem)}
+              {slideItem.data.map((item) => (
+                <Card.Item key={item.docId}>
+                  <Card.Image
+                    src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
+                    alt={item.slug}
+                  />
+                  <Card.Meta>
+                    <Card.SubTitle>{item.title}</Card.SubTitle>
+                    <Card.Text>{item.description}</Card.Text>
+                  </Card.Meta>
+                </Card.Item>
+              ))}
+            </Card.Entities>
+            <Card.Feature category={category}>
+              {/* <Player>
+                <Player.Button/>
+                <Player.video src={"..."}/>
+              </Player> */}
+            </Card.Feature>
+          </Card>
         ))}
-      </Card>
+      </Card.Group>
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />

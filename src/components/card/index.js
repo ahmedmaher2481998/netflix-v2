@@ -71,4 +71,9 @@ Card.Entities = function CardEntities({ children, ...rest }) {
   return <Entities {...rest}>{children}</Entities>;
 };
 
+Card.Feature = function CardFeature({ children, category, ...rest }) {
+  const { setItemFeature, itemFeature, showFeature, setShowFeature } = useContext(FeatureContext);
+  return <Feature {...rest}> {children} </Feature>;
+};
+
 export default Card;

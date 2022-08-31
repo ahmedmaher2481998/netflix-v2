@@ -9,7 +9,7 @@ const Browse = () => {
   useContent({ target: 'series', setTarget: setSeries });
   const slides = selectionFilter({ films, series });
 
-  return <BrowseContainer slides={slides} />;
+  return <BrowseContainer slides={{ ...slides }} />;
 };
 
 export default Browse;
