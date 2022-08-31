@@ -30,9 +30,46 @@ export const SubTitle = styled.p`
   display: none;
 `;
 
-export const Item = styled.div``;
+export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 5px;
+  position: relative;
+  cursor:pointer;
+  transition transform .3s ;
+  &:hover{ 
+    transform: scale(1.1)
+    z-index: 50;
+  }
+  @media(max-width:1200px){
+     &:hover ${Meta}, &:hover ${Text}, &:hover ${SubTitle} {
+      display: block;
+      z-index: 100;
+    }
+  }
+  &:first-of-type {
+    margin-left: 56px;
+    @media (max-width: 1000px) {
+      margin-left: 30px;
+    }
+  }
+  &:last-of-type {
+    margin-right: 56px;
+    @media (max-width: 1000px) {
+      margin-right: 30px;
+    }
+  }
+`;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  border: 0;
+  width: 100%;
+  max-width: 305px;
+  cursor: pointer;
+  height: auto;
+  padding: 0;
+  margin: 0;
+`;
 
 export const Feature = styled.div`
   display: flex;
