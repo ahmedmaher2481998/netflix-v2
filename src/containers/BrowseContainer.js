@@ -4,7 +4,7 @@ import { FireBaseContext } from '../context/firebase';
 import { Loading, Header, Card, Player } from '../components';
 import * as routes from '../constants/routes';
 import { signOut } from 'firebase/auth';
-
+import Fuse from 'fuse.js';
 const BrowseContainer = ({ slides }) => {
   const { auth } = useContext(FireBaseContext);
   const user = auth.currentUser || {};
@@ -24,6 +24,32 @@ const BrowseContainer = ({ slides }) => {
     }, 3000);
   }, [profile.displayName]);
 
+  useEffect(() => {
+    const options = {
+      // isCaseSensitive: false,
+      // includeScore: false,
+      // shouldSort: true,
+      // includeMatches: false,
+      // findAllMatches: false,
+      // minMatchCharLength: 1,
+      // location: 0,
+      // threshold: 0.6,
+      // distance: 100,
+      // useExtendedSearch: false,
+      // ignoreLocation: false,
+      // ignoreFieldNorm: false,
+      // fieldNormWeight: 1,
+      keys: ['data.description', 'data.title', 'data.genre']
+    };
+    const fuse = new Fuse(slideRow, options);
+    const results = fuse.search(searchTerm).map(({ item }) => item);
+
+    if (slideRow.length > 0 && searchTerm.length > 3 && results.length > 0) {
+      setSlideRow(results);
+    } else {
+      setSlideRow(slides[category]);
+    }
+  }, [searchTerm]);
   return profile.displayName ? (
     <>
       {loading ? <Loading src={profile.photoURL} /> : <Loading.ReleaseBody />}
@@ -85,11 +111,11 @@ const BrowseContainer = ({ slides }) => {
         </Header.Feature>
       </Header>
       <Card.Group>
-        {slideRow.map((slideItem) => (
-          <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
-            <Card.Title>{slideItem.title}</Card.Title>
+        {slideRow.map((slideItem, i) => (
+          <Card key={`${category}${i}-${slideItem?.title?.toLowerCase()}`}>
+            <Card.Title>{slideItem?.title}</Card.Title>
             <Card.Entities>
-              {slideItem.data?.map((item) => (
+              {slideItem?.data?.map((item) => (
                 <Card.Item item={item} key={item.docId}>
                   <Card.Image
                     src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
