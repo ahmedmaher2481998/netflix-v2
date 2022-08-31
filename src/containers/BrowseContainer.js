@@ -16,8 +16,6 @@ const BrowseContainer = ({ slides }) => {
 
   useEffect(() => {
     setSlideRow(() => slides[category]);
-
-    // console.log('slide row followed by category', slideRow, category);
   }, [category, slides]);
 
   useEffect(() => {
@@ -25,7 +23,6 @@ const BrowseContainer = ({ slides }) => {
       setLoading(false);
     }, 3000);
   }, [profile.displayName]);
-  console.log('Slide Row ...', slideRow);
 
   return profile.displayName ? (
     <>
@@ -92,9 +89,8 @@ const BrowseContainer = ({ slides }) => {
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
             <Card.Title>{slideItem.title}</Card.Title>
             <Card.Entities>
-              {console.log('slideitem', slideItem)}
-              {slideItem.data.map((item) => (
-                <Card.Item key={item.docId}>
+              {slideItem.data?.map((item) => (
+                <Card.Item item={item} key={item.docId}>
                   <Card.Image
                     src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
                     alt={item.slug}

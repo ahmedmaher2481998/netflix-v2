@@ -52,8 +52,10 @@ Card.Item = function CardItem({ item, children, ...rest }) {
   return (
     <Item
       onClick={() => {
-        setItemFeature(item);
+        setItemFeature(() => item);
         setShowFeature(true);
+        console.log('you selected ', item);
+        console.log('selected');
       }}
       {...rest}>
       {children}
@@ -72,8 +74,30 @@ Card.Entities = function CardEntities({ children, ...rest }) {
 };
 
 Card.Feature = function CardFeature({ children, category, ...rest }) {
-  const { setItemFeature, itemFeature, showFeature, setShowFeature } = useContext(FeatureContext);
-  return <Feature {...rest}> {children} </Feature>;
+  const { itemFeature, showFeature, setShowFeature } = useContext(FeatureContext);
+  return showFeature ? (
+    <Feature
+      {...rest}
+      src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}>
+      <Content>
+        <FeatureTitle>{itemFeature.title}</FeatureTitle>
+        <FeatureText>{itemFeature.description}</FeatureText>
+
+        <FeatureClose onClick={() => setShowFeature(false)}>
+          <img src="/images/icons/close.png" alt="Close" />
+        </FeatureClose>
+        <Group margin="30px 0" flexDirection="row" alignItems="center">
+          <Maturity rating={itemFeature.maturity}>
+            {itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}
+          </Maturity>
+          <FeatureText fontWeight="bold">
+            {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
+          </FeatureText>
+        </Group>
+        {children}
+      </Content>
+    </Feature>
+  ) : null;
 };
 
 export default Card;
