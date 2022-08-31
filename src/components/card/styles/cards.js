@@ -47,8 +47,19 @@ export const Group = styled.div`
     }
   }
 `;
-export const Text = styled.p``;
-export const Entities = styled.div``;
+export const Text = styled.p`
+  margin-top: 5px;
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 0;
+  user-select: none;
+  display: none;
+  line-height: normal;
+`;
+export const Entities = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 export const Meta = styled.div``;
 export const Maturity = styled.div``;
 export const Content = styled.div``;
