@@ -19,7 +19,16 @@ export const Container = styled.div`
   }
 `;
 
-export const SubTitle = styled.p``;
+export const SubTitle = styled.p`
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  user-select: none;
+  display: none;
+`;
+
 export const Item = styled.div``;
 export const Image = styled.img``;
 export const Feature = styled.div``;
