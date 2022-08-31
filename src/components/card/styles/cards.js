@@ -26,7 +26,18 @@ export const Feature = styled.div``;
 export const FeatureTitle = styled.h2``;
 export const FeatureText = styled.p``;
 export const FeatureClose = styled.div``;
-export const Group = styled.div``;
+export const Group = styled.div`
+  display: flex;
+  flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
+  ${({ alignItems }) => alignItems && `align-items:${alignItems};`}
+  ${({ margin }) => margin && `margin:${margin};`}
+
+  > ${Container}:first-of-type {
+    @media (max-width: 1100px) {
+      margin-top: -100px;
+    }
+  }
+`;
 export const Text = styled.p``;
 export const Entities = styled.div``;
 export const Meta = styled.div``;
