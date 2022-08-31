@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro';
 
-export const Container = styled.div``;
 export const Title = styled.p`
   font-size: 24px;
   color: #e5e5e5;
@@ -9,6 +8,17 @@ export const Title = styled.p`
   margin-right: 56px;
   margin-top: 0;
 `;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  > ${Title} {
+    @media (max-width: 1000px) {
+      margin-left: 30px;
+    }
+  }
+`;
+
 export const SubTitle = styled.p``;
 export const Item = styled.div``;
 export const Image = styled.img``;
