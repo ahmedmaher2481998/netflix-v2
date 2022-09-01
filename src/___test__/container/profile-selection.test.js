@@ -39,3 +39,12 @@ test('selection filter works as intended ', () => {
   expect(slides.series[1].data[0].maturity).toBe('12');
   expect(slides.series[1].data[0].slug).toBe('ninja-cat');
 });
+
+test('selection filter with noe parameters', () => {
+  const slides = selectionFilter();
+
+  expect(slides.series[0].title).toBe('Documentaries');
+  expect(slides.films[0].title).toBe('Drama');
+  expect(slides.series[0].data).toBe(undefined);
+  expect(slides.films[0].data).toBe(undefined);
+});
