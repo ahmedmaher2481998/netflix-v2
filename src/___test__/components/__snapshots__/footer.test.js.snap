@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render <Footer/> renders footer component 1`] = `
+<div
+  class="footer__Container-sc-1cee0kc-0 gJujnG"
+>
+  <p
+    class="footer__Title-sc-1cee0kc-3 frLQnm"
+  >
+     
+    Questions? Contact us.
+  </p>
+  <div
+    class="footer__Break-sc-1cee0kc-6 jeMVzY"
+  >
+     
+  </div>
+  <div
+    class="footer__Row-sc-1cee0kc-2 iXCZCR"
+  >
+     
+    <div
+      class="footer__Column-sc-1cee0kc-1 ecaNte"
+    >
+       
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        FAQ
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Investor Relations
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Privacy
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Speed Test
+      </a>
+    </div>
+    <div
+      class="footer__Column-sc-1cee0kc-1 ecaNte"
+    >
+       
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Help Center
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Jobs
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Cookie Preferences
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Legal Notices
+      </a>
+    </div>
+    <div
+      class="footer__Column-sc-1cee0kc-1 ecaNte"
+    >
+       
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Account
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Ways to Watch
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Corporate Information
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Only on Netflix
+      </a>
+    </div>
+    <div
+      class="footer__Column-sc-1cee0kc-1 ecaNte"
+    >
+       
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Media Center
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Terms of Use
+      </a>
+      <a
+        class="footer__Link-sc-1cee0kc-4 hPfMJU"
+        href="#"
+      >
+         
+        Contact Us
+      </a>
+    </div>
+    <div
+      class="footer__Break-sc-1cee0kc-6 jeMVzY"
+    >
+       
+    </div>
+  </div>
+  <div
+    class="footer__Break-sc-1cee0kc-6 jeMVzY"
+  >
+     
+  </div>
+  <p
+    class="footer__Text-sc-1cee0kc-5 kNCtSa"
+  >
+     
+    Netflix 
+  </p>
+</div>
+`;
