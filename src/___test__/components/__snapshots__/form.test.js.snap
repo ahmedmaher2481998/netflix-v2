@@ -59,21 +59,3 @@ exports[`<Form /> renders the <Form /> with populated data 1`] = `
   </p>
 </div>
 `;
-
-exports[`<From/> renders the error component 1`] = `
-<div
-  class="form__Container-sc-1yxr1z3-1 kAqNwv"
->
-  <div
-    class="form__Error-sc-1yxr1z3-8 chvivB"
-  >
-    Your email address is already being used
-  </div>
-  <button
-    class="form__Submit-sc-1yxr1z3-5 cEuUzd"
-    type="submit"
-  >
-    Sign In
-  </button>
-</div>
-`;
