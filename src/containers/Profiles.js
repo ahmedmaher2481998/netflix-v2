@@ -20,6 +20,7 @@ const SelectProfileContainer = ({ user, setProfile }) => {
         <Profiles.Title>{"Who's watching?"} </Profiles.Title>
         <Profiles.List>
           <Profiles.User
+            data-testid="profile-user"
             onClick={() => {
               setProfile(() => ({
                 displayName: user.displayName,
