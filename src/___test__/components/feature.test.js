@@ -34,4 +34,14 @@ describe('<Feature/>', () => {
     expect(queryByText('Watch anywhere. Cancel anytime.')).toBeTruthy();
     expect(container.firstChild).toMatchSnapshot();
   });
+
+  it('renders the <Feature/> with only Break', () => {
+    const { getByTestId, container } = render(
+      <Feature>
+        <Feature.Break data-testid="break" />
+      </Feature>
+    );
+    expect(getByTestId('break')).toBeTruthy();
+    expect(container.firstChild).toMatchSnapshot();
+  });
 });

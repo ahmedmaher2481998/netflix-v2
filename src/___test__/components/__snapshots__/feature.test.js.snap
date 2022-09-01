@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Feature/> renders the <Feature/> with only Break 1`] = `
+<div
+  class="Feature__Container-sc-1ch7wct-0 eUggEy"
+>
+  <div
+    class="Feature__Break-sc-1ch7wct-1 hmGlOx"
+    data-testid="break"
+  />
+</div>
+`;
+
 exports[`<Feature/> renders the <Feature/> with only Title 1`] = `
 <div
   class="Feature__Container-sc-1ch7wct-0 eUggEy"
