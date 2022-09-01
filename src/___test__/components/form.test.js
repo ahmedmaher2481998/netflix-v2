@@ -1,8 +1,11 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { Form } from '../../components';
+
 jest.mock('react-router-dom');
-describe('<From/>', () => {
-  it('renders the form with populated data', () => {
+
+describe('<Form />', () => {
+  it('renders the <Form /> with populated data', () => {
     const { container, getByText, getByPlaceholderText } = render(
       <Form>
         <Form.Title>Sign In Now</Form.Title>
@@ -18,9 +21,9 @@ describe('<From/>', () => {
         <Form.Text>
           New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
         </Form.Text>
-        <Form.TextSmall>
-          This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
-        </Form.TextSmall>
+        <Form.SmallText>
+          {"This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more."}
+        </Form.SmallText>
       </Form>
     );
 
@@ -37,7 +40,7 @@ describe('<From/>', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('renders the error component', () => {
+  it('renders the <Form /> with an error', () => {
     const { container, getByText, queryByText } = render(
       <Form>
         <Form.Error>Your email address is already being used</Form.Error>
