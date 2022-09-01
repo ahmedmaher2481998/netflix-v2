@@ -11,7 +11,7 @@ describe('<Loading/>', () => {
     expect(container.firstChild).toBeTruthy();
   });
   it('checks for the releaseBody', () => {
-    const { container } = render(<Loading.ReleaseBody />);
-    expect(container.firstChild).toBeTruthy();
+    const { container } = render(<Loading.ReleaseBody data-testid="loading" />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

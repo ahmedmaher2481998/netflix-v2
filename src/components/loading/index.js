@@ -2,7 +2,7 @@ import { Spinner, ReleaseBody, LockBody, Picture } from './styles/loading';
 
 const Loading = ({ src, ...rest }) => {
   return (
-    <Spinner {...rest}>
+    <Spinner data-testid="loading" {...rest}>
       <Picture src={`/images/users/${src}.png`} alt={'user profile image'} />
       <LockBody />
     </Spinner>
