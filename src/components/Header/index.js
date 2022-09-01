@@ -20,7 +20,7 @@ import { useState } from 'react';
 import { Link as ReachRouterLink } from 'react-router-dom';
 const Header = ({ bg = true, hideOnSmallScreen, children, ...restProps }) => {
   return bg ? (
-    <Background hideOnSmallScreen={hideOnSmallScreen} {...restProps}>
+    <Background data-testid="header-bg" hideOnSmallScreen={hideOnSmallScreen} {...restProps}>
       {children}
     </Background>
   ) : (
@@ -80,10 +80,11 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...rest }) {
   const [searchActive, setSearchActive] = useState(false);
   return (
     <Search>
-      <SearchIcon onClick={() => setSearchActive((pre) => !pre)}>
+      <SearchIcon data-testid="search-click" onClick={() => setSearchActive((pre) => !pre)}>
         <img src={'/images/icons/search.png'} alt={'search icon'} />
       </SearchIcon>
       <SearchInput
+        data-testid="search-input"
         placeholder="Search films and series"
         value={searchTerm}
         onChange={({ target }) => setSearchTerm(target.value)}
