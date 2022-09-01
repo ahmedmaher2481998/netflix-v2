@@ -6,8 +6,8 @@ const FAQContainer = () => {
   return (
     <>
       <Accordion>
+        <Accordion.Title>Frequently Asked Questions</Accordion.Title>
         <Accordion.Frame>
-          <Accordion.Title>Frequently Asked Questions</Accordion.Title>
           {FAQData.map((item) => {
             return (
               <Accordion.Item key={item.id}>
