@@ -50,10 +50,13 @@ describe('<Accordion>', () => {
     );
 
     expect(queryByText(FAQData[0].body)).toBeFalsy();
-    fireEvent.click(queryByText(FAQData[0].body));
+
+    fireEvent.click(queryByText(FAQData[0].header));
     expect(queryByText(FAQData[0].body)).toBeTruthy();
-    fireEvent.click(queryByText(FAQData[0].body));
+
+    fireEvent.click(queryByText(FAQData[0].header));
     expect(queryByText(FAQData[0].body)).toBeFalsy();
+
     expect(container.firstChild).toMatchSnapshot();
   });
 });
