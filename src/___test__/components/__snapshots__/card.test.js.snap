@@ -78,3 +78,84 @@ exports[`<Card/> renders <Card/> with populated data  1`] = `
   </div>
 </div>
 `;
+
+exports[`<Card/> toggles the feature upon clicking  a card item 1`] = `
+<div
+  class="cards__Group-sc-1y7r0tx-11 jIAYgV"
+>
+  <div
+    class="cards__Container-sc-1y7r0tx-1 JkTZa"
+  >
+    <p
+      class="cards__Title-sc-1y7r0tx-0 fZSMtY"
+    >
+      Documentaries
+    </p>
+    <div
+      class="cards__Entities-sc-1y7r0tx-12 gTKCYJ"
+    >
+      <div
+        class="cards__Item-sc-1y7r0tx-5 jYycTW"
+        data-testid="tiger-king-item-feature"
+      >
+        <img
+          alt="tiger-king"
+          class="cards__Image-sc-1y7r0tx-6 bTjcxW"
+          src="/images/series/documentaries/tiger-king/small.jpg"
+        />
+        <div
+          class="cards__Meta-sc-1y7r0tx-3 hFedYa"
+        >
+          <p
+            class="cards__SubTitle-sc-1y7r0tx-2 bwusPp"
+          >
+            Tiger King
+          </p>
+          <p
+            class="cards__Text-sc-1y7r0tx-4 exhwMV"
+          >
+            Tiger King description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="cards__Container-sc-1y7r0tx-1 JkTZa"
+  >
+    <p
+      class="cards__Title-sc-1y7r0tx-0 fZSMtY"
+    >
+      Feel Good
+    </p>
+    <div
+      class="cards__Entities-sc-1y7r0tx-12 gTKCYJ"
+    >
+      <div
+        class="cards__Item-sc-1y7r0tx-5 jYycTW"
+        data-testid="juno-item-feature"
+      >
+        <img
+          alt="juno"
+          class="cards__Image-sc-1y7r0tx-6 bTjcxW"
+          src="/images/series/feel-good/juno/small.jpg"
+        />
+        <div
+          class="cards__Meta-sc-1y7r0tx-3 hFedYa"
+        >
+          <p
+            class="cards__SubTitle-sc-1y7r0tx-2 bwusPp"
+          >
+            Juno
+          </p>
+          <p
+            class="cards__Text-sc-1y7r0tx-4 exhwMV"
+          >
+            Juno description
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

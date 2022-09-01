@@ -67,10 +67,10 @@ describe('<Card/>', () => {
     expect(getByAltText(slideRow[0].data[0].slug)).toBeTruthy();
     expect(queryByText(slideRow[0].data[0].description)).toBeTruthy();
 
-    expect(queryByText(slideRow[0].title)).toBeTruthy();
-    expect(queryByText(slideRow[0].data[1].title)).toBeTruthy();
-    expect(getByAltText(slideRow[0].data[1].slug)).toBeTruthy();
-    expect(queryByText(slideRow[0].data[1].description)).toBeTruthy();
+    expect(queryByText(slideRow[1].title)).toBeTruthy();
+    expect(queryByText(slideRow[1].data[0].title)).toBeTruthy();
+    expect(getByAltText(slideRow[1].data[0].slug)).toBeTruthy();
+    expect(queryByText(slideRow[1].data[0].description)).toBeTruthy();
 
     expect(container.firstChild).toMatchSnapshot();
   });
