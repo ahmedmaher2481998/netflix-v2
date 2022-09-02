@@ -49,7 +49,7 @@
       "!<rootDir>/src/lib/firebase.js",
       "!<rootDir>/src/lib/firebase.prod.js",
       "!<rootDir>/src/index.js",
-      "!<rootDir>/src/seed.js",
+      "!<rootDir>/src/lib/seed.js",
       "!<rootDir>/src/utils/index.js",
       "!<rootDir>/src/pages/index.js",
       "!<rootDir>/src/global-styles.js",

@@ -37,13 +37,13 @@ const SignIn = () => {
       <HeaderContainer>
         <Form>
           <Form.Title>Sign In</Form.Title>
-          {error && <Form.Error>{error}</Form.Error>}
+          {error && <Form.Error data-testid="error">{error}</Form.Error>}
           <Form.Base onSubmit={handleSignIn}>
             <Form.Input
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
               type="email"
-              placeholder="Email Address"
+              placeholder="Email address"
             />
             <Form.Input
               value={password}
@@ -51,7 +51,7 @@ const SignIn = () => {
               type="password"
               placeholder="Password"
             />
-            <Form.Submit type="submit" disabled={validate}>
+            <Form.Submit data-testid="sign-in" type="submit" disabled={validate}>
               {' '}
               Sign In{' '}
             </Form.Submit>

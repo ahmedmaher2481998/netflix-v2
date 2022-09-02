@@ -55,7 +55,7 @@ const SignIn = () => {
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
               type="email"
-              placeholder="Email Address"
+              placeholder="Email address"
             />
             <Form.Input
               value={password}
