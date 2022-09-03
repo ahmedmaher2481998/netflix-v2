@@ -10,7 +10,7 @@ const Home = () => {
         <Feature>
           <Feature.Title>Unlimited movies, TV shows, and more.</Feature.Title>
           <Feature.SubTitle>Watch anywhere. Cancel anytime.</Feature.SubTitle>
-          <Feature.Break />
+
           <OptForm>
             <OptForm.Input placeholder="Email address" />
             <OptForm.Button>Try it now </OptForm.Button>

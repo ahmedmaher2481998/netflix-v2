@@ -5,28 +5,28 @@ export const Container = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: gray;
+
+  padding: 5px;
   margin-top: 20px;
-  flex-direction: row;
+  align-items: center;
   flex-wrap: wrap;
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     align-items: center;
     flex-direction: column;
   }
 `;
 
 export const Input = styled.input`
-  box-sizing: border-box;
   max-width: 450px;
   width: 100%;
   border: 0;
   padding: 10px;
   height: 70px;
+  box-sizing: border-box;
 `;
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 70px;
   background: #e50914;
   color: white;
@@ -47,6 +47,9 @@ export const Button = styled.button`
     background: #f40612;
   }
   @media (max-width: 1000px) {
+    ${Container} {
+      align-items: center;
+    }
     height: 70px;
     font-size: 16px;
     margin-top: 20px;

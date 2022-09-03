@@ -10,10 +10,11 @@ export const Frame = styled.div`
 `;
 
 export const Inner = styled.div`
-  display: flex;
   padding: 70px 45px;
+  display: flex;
   flex-direction: column;
-  max-width: 728px;
+  max-width: 900px;
+
   margin: auto;
 `;
 

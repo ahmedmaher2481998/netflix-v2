@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import * as routes from './constants/routes';
 import { useAuthUser } from './hooks';
@@ -5,7 +6,11 @@ import { Browse, Home, SignIn, SignUp } from './pages/';
 
 function App() {
   const { user } = useAuthUser();
-
+  useEffect(() => {
+    const country = localStorage.getItem('country') || 'egypt';
+    const title = `Netflix ${country} - Watch TV Shows Online, Watch Movies Online`;
+    document.title = title;
+  }, []);
   return (
     <Router>
       <Routes>
