@@ -14,11 +14,13 @@ const SignIn = () => {
   const validate = password === '' || emailAddress === '';
   const { auth } = useContext(FireBaseContext);
   const handleSignIn = (e) => {
-    e.preventDefault();
+    e.preventdefault();
     signInWithEmailAndPassword(auth, emailAddress, password)
       .then((userCredential) => {
         // Signed in
-        // const user = userCredential.user;
+        const user = userCredential.user;
+        localStorage.setItem('netflix-user', JSON.stringify(user));
+
         setEmailAddress('');
         setPassword('');
         setError('');

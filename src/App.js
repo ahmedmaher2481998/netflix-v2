@@ -6,6 +6,7 @@ import { Browse, Home, SignIn, SignUp } from './pages/';
 
 function App() {
   const { user } = useAuthUser();
+  // const user = JSON.parse(localStorage.getItem('netflix-user')) || null;
   useEffect(() => {
     const country = localStorage.getItem('country') || 'egypt';
     const title = `Netflix ${country} - Watch TV Shows Online, Watch Movies Online`;

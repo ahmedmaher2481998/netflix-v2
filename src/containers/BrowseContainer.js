@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
 import SelectProfileContainer from './Profiles';
 import { FireBaseContext } from '../context/firebase';
+import { useNavigate } from 'react-router-dom';
 import { Loading, Header, Card, Player } from '../components';
 import * as routes from '../constants/routes';
 import { signOut } from 'firebase/auth';
 import Fuse from 'fuse.js';
 const BrowseContainer = ({ slides }) => {
+  //states
   const { auth } = useContext(FireBaseContext);
   const user = auth.currentUser || {};
   const [profile, setProfile] = useState({});
@@ -13,7 +15,8 @@ const BrowseContainer = ({ slides }) => {
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState('series');
   const [slideRow, setSlideRow] = useState([]);
-
+  const navigate = useNavigate();
+  //effects
   useEffect(() => {
     setSlideRow(() => slides[category]);
   }, [category, slides]);
@@ -50,6 +53,7 @@ const BrowseContainer = ({ slides }) => {
       setSlideRow(slides[category]);
     }
   }, [searchTerm]);
+  //return
   return profile.displayName ? (
     <>
       {loading ? <Loading src={profile.photoURL} /> : <Loading.ReleaseBody />}

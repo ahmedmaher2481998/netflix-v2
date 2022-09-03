@@ -19,13 +19,12 @@ const SignIn = () => {
     createUserWithEmailAndPassword(auth, emailAddress, password)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
-        console.log(user);
+        // const user = userCredential.user;
+
         updateProfile(auth.currentUser, {
           displayName: firstName,
           photoURL: Math.floor(Math.random() * 5) + 1
         });
-        console.log(auth.currentUser);
         navigate(routers.Browse);
         // ...
       })
