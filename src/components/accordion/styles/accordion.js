@@ -22,8 +22,8 @@ export const Title = styled.h1`
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 8px;
-  text-align: center;
   color: white;
+  text-align: center;
   @media (max-width: 600px) {
     font-size: 35px;
   }
@@ -70,22 +70,22 @@ export const Header = styled.div`
 
 export const Body = styled.p`
   font-size: 26px;
-  padding: 0.8em 1.2em 0.8em 1.2em;
+  margin-top: 5px;
+  padding: 15px;
   font-weight: normal;
   line-height: normal;
   background: #303030;
   white-space: pre-wrap;
   user-select: none;
   overflow: hidden;
-  /* margin-top: 5px; */
   &.closed {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+    transition: all 1s cubic-bezier(0.5, 0, 0.1, 1);
   }
   &.open {
     max-height: 1200px;
-    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+    transition: all 0.1s cubic-bezier(0.5, 0, 0.1, 1);
   }
   span {
     display: block;
