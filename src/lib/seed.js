@@ -1,3 +1,11 @@
+/**
+ *
+ * @param {db,collection,addDoc} param3
+ *  data base object from <firebase />
+ * param1 object  from selecting the collection to insert data int o
+ * param1 {addDoc }
+ */
+
 export async function seedDatabase({ db, collection, addDoc }) {
   function getUUID() {
     // eslint gets funny about bitwise

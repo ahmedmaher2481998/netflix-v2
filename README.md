@@ -1,6 +1,23 @@
 # Netflix-V2
 
-> A netflix clone using react firebas nad compound components design pattern
+> A netflix clone with full authentication && authorization using react, firebas, styled-components ,jest and compound components design pattern,and have unit tests with 90% code coverage using jest & react testing library
+
+## tools
+
+- react
+- firebase (auth/firestore)
+- styled-components
+- fuse
+- jest
+- react-context
+- react-router-dom
+
+## features
+
+- login-logout
+- play trailer for each film/series
+- switch between two categories fils-series
+- full responsive
 
 ## bugs
 
@@ -19,4 +36,4 @@
 
 7- the accordion spaces is off / add footer to the browse page
 
-8- the jumbotron is 4 sections / update the main home img / regenerate random image for the browse page
+8- regenerate random image for the browse page
