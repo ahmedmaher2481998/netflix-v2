@@ -19,21 +19,21 @@
 - switch between two categories fils-series
 - full responsive
 
-## bugs
+<!-- ## bugs -->
 
-1. the opt from is not responsive as it should be
-2. footer looks very big
-3. make sure the route protectors & redirects are working correctly
+<!-- 1. the opt from is not responsive as it should be -->
+<!-- 2. footer looks very big -->
+<!-- 3. make sure the route protectors & redirects are working correctly -->
 
-   <!-- 4. get fils , series from useContent hook -->
-   <!-- 5. generate titles using genre's by a function of you's -->
+   <!-- done 4. get fils , series from useContent hook -->
+   <!--done  5. generate titles using genre's by a function of you's -->
 
-4. implement the slides in th browse page
+<!-- 4. implement the slides in th browse page -->
 
-5- redirect after sing in / out
+<!-- 5- redirect after sing in / out -->
 
-6- play button is not showing
+<!-- 6- play button is not showing -->
 
-7- the accordion spaces is off / add footer to the browse page
+<!-- 7- the accordion spaces is off / add footer to the browse page -->
 
-8- regenerate random image for the browse page
+<!-- 8- regenerate random image for the browse page -->
