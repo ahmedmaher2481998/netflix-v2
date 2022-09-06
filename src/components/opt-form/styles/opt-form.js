@@ -5,12 +5,11 @@ export const Container = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
-
   padding: 5px;
   margin-top: 20px;
   align-items: center;
   flex-wrap: wrap;
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     align-items: center;
     flex-direction: column;
   }

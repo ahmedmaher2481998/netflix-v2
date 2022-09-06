@@ -7,14 +7,14 @@ export const Container = styled.div`
 
 export const Frame = styled.div`
   margin-bottom: 40px;
+  max-width: 670px;
+  margin: 70px 75px;
 `;
 
 export const Inner = styled.div`
-  padding: 70px 45px;
   display: flex;
   flex-direction: column;
-  max-width: 900px;
-
+  width: 860px;
   margin: auto;
 `;
 
@@ -28,13 +28,15 @@ export const Title = styled.h1`
   @media (max-width: 600px) {
     font-size: 35px;
   }
+
+  margin-top: 20px;
 `;
 
 export const Item = styled.div`
   color: white;
   margin: auto;
   margin-bottom: 10px;
-  max-width: 728px;
+  max-width: 670px;
   width: 100%;
 
   &:first-of-type {

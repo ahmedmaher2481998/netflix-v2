@@ -1,6 +1,8 @@
 # Netflix-V2
 
-> A netflix clone with full authentication && authorization using react, firebas, styled-components ,jest and compound components design pattern,and have unit tests with 90% code coverage using jest & react testing library
+> A netflix clone with full authentication && authorization using react, firebas, styled-components ,jest and compound components design pattern,and have unit tests with full code coverage using jest & react testing library
+
+[live]: https://netflix-ahmedmaher-v2.vercel.app/
 
 ## tools
 
@@ -15,18 +17,19 @@
 ## features
 
 - login-logout
-- play trailer for each film/series
-- switch between two categories fils-series
+- play trailer for each film/series (one video)
+- switch between two types films / series with four categories
+- data is stored in firestore
 - full responsive
+- full code coverage in testing
+
+## [MIT]:./MitLhttps://netflix-ahmedmaher-v2.vercel.app/icense.md
 
 <!-- ## bugs -->
 
 <!-- 1. the opt from is not responsive as it should be -->
 <!-- 2. footer looks very big -->
 <!-- 3. make sure the route protectors & redirects are working correctly -->
-
-   <!-- done 4. get fils , series from useContent hook -->
-   <!--done  5. generate titles using genre's by a function of you's -->
 
 <!-- 4. implement the slides in th browse page -->
 
