@@ -2,14 +2,14 @@
 
 exports[`<OptForm /> renders the <OptForm /> with populated data 1`] = `
 <div
-  class="opt-form__Container-sc-1al54p3-0 hnOGLG"
+  class="opt-form__Container-sc-1al54p3-0 iiDMhP"
 >
   <input
-    class="opt-form__Input-sc-1al54p3-1 eIbLqU"
+    class="opt-form__Input-sc-1al54p3-1 jAQpJs"
     placeholder="Email address"
   />
   <button
-    class="opt-form__Button-sc-1al54p3-2 dbZMPt"
+    class="opt-form__Button-sc-1al54p3-2 jCFRQm"
   >
     Try it now
     <img

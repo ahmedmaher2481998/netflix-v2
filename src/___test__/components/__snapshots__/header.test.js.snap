@@ -2,7 +2,7 @@
 
 exports[`<Header /> renders the basic <Header /> with a background 1`] = `
 <div
-  class="Header__Background-sc-1wuu5sc-0 bYuRrd"
+  class="Header__Background-sc-1wuu5sc-0 bEPqfn"
   data-testid="header-bg"
 >
   <div

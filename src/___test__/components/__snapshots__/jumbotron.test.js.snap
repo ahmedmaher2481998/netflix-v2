@@ -103,5 +103,38 @@ exports[`<JumboTron /> renders the <JumboTron /> with populated data 1`] = `
       </div>
     </div>
   </div>
+  <div
+    class="jumbotron__Item-sc-khbsvl-1 zXMtV"
+  >
+    <div
+      class="jumbotron__Inner-sc-khbsvl-0 hmGvYY"
+      direction="row-reverse"
+    >
+      <div
+        class="jumbotron__Pane-sc-khbsvl-4 RsGgO"
+      >
+        <h1
+          class="jumbotron__Title-sc-khbsvl-2 heEIsu"
+        >
+          Create profiles for kids.
+        </h1>
+        <h2
+          class="jumbotron__Subtitle-sc-khbsvl-3 fOHpUJ"
+        >
+          Send kids on adventures with their favorite characters in a space made just for them—free with your membership.
+        </h2>
+      </div>
+      <div
+        class="jumbotron__Pane-sc-khbsvl-4 RsGgO"
+      >
+        <img
+          alt="Available for kids"
+          class="jumbotron__Image-sc-khbsvl-5 kviZcQ"
+          data-testid="4-jumbo-image"
+          src="/images/misc/kids.jpg"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 `;

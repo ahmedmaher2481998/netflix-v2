@@ -62,7 +62,7 @@ const SignIn = () => {
               type="password"
               placeholder="Password"
             />
-            <Form.Submit type="submit" disabled={validate}>
+            <Form.Submit type="submit" data-testid="sign-up" disabled={validate}>
               {' '}
               Sign Up{' '}
             </Form.Submit>

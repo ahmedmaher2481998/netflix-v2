@@ -2,14 +2,14 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Browse } from '../../pages';
-import { FirebaseContext } from '../../context/firebase';
+import { FireBaseContext } from '../../context/firebase';
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useHistory: () => ({})
 }));
 
-jest.mock('../../utils', () => ({
+jest.mock('../../utils/selection-filter', () => ({
   selectionFilter: () => ({
     series: [
       {
@@ -63,9 +63,9 @@ describe('<Browse />', () => {
   it('renders the browse page with <SelectProfileContainer />', async () => {
     const { getByTestId, getByPlaceholderText, queryByTestId, debug } = render(
       <Router>
-        <FirebaseContext.Provider value={{ firebase }}>
+        <FireBaseContext.Provider value={{ firebase }}>
           <Browse />
-        </FirebaseContext.Provider>
+        </FireBaseContext.Provider>
       </Router>
     );
   });

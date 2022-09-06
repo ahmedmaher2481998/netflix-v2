@@ -5,20 +5,20 @@ exports[`<Accordion> Renders <Accordion/> with populated data 1`] = `
   class="accordion__Container-sc-1owlhjn-0 eyIHCQ"
 >
   <div
-    class="accordion__Inner-sc-1owlhjn-2 dYMCgV"
+    class="accordion__Inner-sc-1owlhjn-2 gJTKpF"
   >
     <div
-      class="accordion__Frame-sc-1owlhjn-1 kiMetJ"
+      class="accordion__Frame-sc-1owlhjn-1 ipHKkF"
     >
        
       <h1
-        class="accordion__Title-sc-1owlhjn-3 bxPBqH"
+        class="accordion__Title-sc-1owlhjn-3 eOrsGy"
       >
          
         Frequently Asked Questions
       </h1>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -34,7 +34,7 @@ exports[`<Accordion> Renders <Accordion/> with populated data 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -50,7 +50,7 @@ exports[`<Accordion> Renders <Accordion/> with populated data 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -66,7 +66,7 @@ exports[`<Accordion> Renders <Accordion/> with populated data 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -82,7 +82,7 @@ exports[`<Accordion> Renders <Accordion/> with populated data 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -107,20 +107,20 @@ exports[`<Accordion> toggles the body of the <Accordion.Item/> on click 1`] = `
   class="accordion__Container-sc-1owlhjn-0 eyIHCQ"
 >
   <div
-    class="accordion__Inner-sc-1owlhjn-2 dYMCgV"
+    class="accordion__Inner-sc-1owlhjn-2 gJTKpF"
   >
     <h1
-      class="accordion__Title-sc-1owlhjn-3 bxPBqH"
+      class="accordion__Title-sc-1owlhjn-3 eOrsGy"
     >
        
       Frequently Asked Questions
     </h1>
     <div
-      class="accordion__Frame-sc-1owlhjn-1 kiMetJ"
+      class="accordion__Frame-sc-1owlhjn-1 ipHKkF"
     >
        
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -136,7 +136,7 @@ exports[`<Accordion> toggles the body of the <Accordion.Item/> on click 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -152,7 +152,7 @@ exports[`<Accordion> toggles the body of the <Accordion.Item/> on click 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -168,7 +168,7 @@ exports[`<Accordion> toggles the body of the <Accordion.Item/> on click 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
@@ -184,7 +184,7 @@ exports[`<Accordion> toggles the body of the <Accordion.Item/> on click 1`] = `
         </div>
       </div>
       <div
-        class="accordion__Item-sc-1owlhjn-4 fPKBwt"
+        class="accordion__Item-sc-1owlhjn-4 ickhyh"
       >
          
         <div
