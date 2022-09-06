@@ -8,15 +8,15 @@ const UseAuthUser = () => {
     const listener = onAuthStateChanged(auth, (user) => {
       if (user) {
         localStorage.setItem('netflix-user', JSON.stringify(user));
-        console.log('welcome . Listener is logging you in ....');
+
         setUserState(user);
       } else {
         localStorage.removeItem('netflix-user');
-        console.log('Bye . Listener is logging you Out ....');
+        setUserState(null);
       }
     });
 
-    return listener();
+    return () => listener();
   }, []);
 
   return { user: userState };
