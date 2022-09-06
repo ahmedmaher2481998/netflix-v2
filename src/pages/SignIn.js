@@ -6,6 +6,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import * as routers from '../constants/routes';
 import { useNavigate } from 'react-router-dom';
 import { FireBaseContext } from '../context/firebase';
+import { useEffect } from 'react';
 const SignIn = () => {
   const navigate = useNavigate();
   const [error, setError] = useState('');
@@ -13,8 +14,9 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
   const validate = password === '' || emailAddress === '';
   const { auth } = useContext(FireBaseContext);
+  let t;
   const handleSignIn = (e) => {
-    e.preventdefault();
+    e.preventDefault();
     signInWithEmailAndPassword(auth, emailAddress, password)
       .then((userCredential) => {
         // Signed in
@@ -24,7 +26,9 @@ const SignIn = () => {
         setEmailAddress('');
         setPassword('');
         setError('');
-        navigate(routers.Browse);
+        // t = setTimeout(() => {
+        //   navigate(routers.Browse);
+        // }, 1000);
         // ...
       })
       .catch((error) => {
@@ -34,6 +38,10 @@ const SignIn = () => {
         setError(error);
       });
   };
+  useEffect(() => {
+    return () => (t ? clearTimeout(t) : null);
+  }, []);
+
   return (
     <>
       <HeaderContainer>
@@ -41,6 +49,7 @@ const SignIn = () => {
           <Form.Title>Sign In</Form.Title>
           {error && <Form.Error data-testid="error">{error}</Form.Error>}
           <Form.Base onSubmit={handleSignIn}>
+            {/* <Form.Base onSubmit={test}> */}
             <Form.Input
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}

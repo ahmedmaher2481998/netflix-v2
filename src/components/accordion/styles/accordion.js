@@ -8,7 +8,7 @@ export const Container = styled.div`
 export const Frame = styled.div`
   margin-bottom: 40px;
   max-width: 670px;
-  margin: 70px 75px;
+  margin: 20px 85px 70px;
 `;
 
 export const Inner = styled.div`
@@ -21,8 +21,8 @@ export const Inner = styled.div`
 export const Title = styled.h1`
   font-size: 50px;
   line-height: 1.1;
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 0;
   color: white;
   text-align: center;
   @media (max-width: 600px) {

@@ -27,13 +27,11 @@
 
 <!-- ## bugs -->
 
-<!-- 1. the opt from is not responsive as it should be -->
-<!-- 2. footer looks very big -->
 <!-- 3. make sure the route protectors & redirects are working correctly -->
 
-<!-- 4. implement the slides in th browse page -->
+<!-- 4.done  implement the slides in th browse page -->
 
-<!-- 5- redirect after sing in / out -->
+<!-- 5- working on it ... redirect after sing in / out -->
 
 <!-- 6- play button is not showing -->
 
