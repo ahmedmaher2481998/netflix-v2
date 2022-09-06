@@ -4,6 +4,11 @@
 
 [live]: https://netflix-ahmedmaher-v2.vercel.app/
 
+<hr>
+
+![Browse page](public/images/browse.png)cle
+<br>
+
 ## tools
 
 - react
@@ -23,18 +28,6 @@
 - full responsive
 - full code coverage in testing
 
-## [MIT]:./MitLhttps://netflix-ahmedmaher-v2.vercel.app/icense.md
+<hr>
 
-<!-- ## bugs -->
-
-<!-- 3. make sure the route protectors & redirects are working correctly -->
-
-<!-- 4.done  implement the slides in th browse page -->
-
-<!-- 5- working on it ... redirect after sing in / out -->
-
-<!-- 6- play button is not showing -->
-
-<!-- 7- the accordion spaces is off / add footer to the browse page -->
-
-<!-- 8- regenerate random image for the browse page -->
+[MIT](./LICENSE.md)
