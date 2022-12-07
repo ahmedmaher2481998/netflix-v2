@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 
-import { seedDatabase } from './seed';
+// import { seedDatabase } from './seed';
 import { getFirestore } from 'firebase/firestore';
 // inserting data into firestore
 // import { getFirestore, collection, doc, addDoc } from 'firebase/firestore';

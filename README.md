@@ -24,7 +24,7 @@
 - login-logout
 - play trailer for each film/series (one video)
 - switch between two types films / series with four categories
-- data is stored in firestore
+- data is stored in fireStore
 - full responsive
 - full code coverage in testing
 
